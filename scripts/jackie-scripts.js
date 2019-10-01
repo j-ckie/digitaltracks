@@ -51,6 +51,11 @@ function showVideo(results) {
     }); 
     
     $('#search-results').html(html);
+    hideSearch()
+}
+
+function hideSearch() {
+    document.getElementById("search-term").style.display='none';
 }
 
 function showResults(results) {
