@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
-        getRequest(searchTerm + 'soundtrack');
+        getRequest(searchTerm.toString() + 'soundtrack');
     });
 });
 
@@ -12,7 +12,7 @@ function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4',
+        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', 
         q: searchTerm,
         type: 'video',
         maxResults: '1'
