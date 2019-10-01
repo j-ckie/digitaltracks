@@ -1,4 +1,3 @@
-
 // solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
@@ -31,4 +30,9 @@ function showResults(results) {
     }); 
     
     $('#search-results').html(html);
+    hideSearch()
+}
+
+function hideSearch() {
+    document.getElementById("search-term").style.display='none';
 }
