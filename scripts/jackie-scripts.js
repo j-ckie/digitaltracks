@@ -1,8 +1,8 @@
 
-// solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
-$(document).ready(function(){
-    $('#some-id').trigger('click');
-  });
+
+// $(document).ready(function(){
+//     $('#some-id').trigger('click');
+//   });
 //   Insert first video ID into "some-id"
 
 
