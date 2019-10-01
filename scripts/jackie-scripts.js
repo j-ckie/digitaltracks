@@ -1,10 +1,18 @@
 
 // solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
+$(document).ready(function(){
+    $('#some-id').trigger('click');
+  });
+//   Insert first video ID into "some-id"
+
+
+// solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
+
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
-        getRequest(searchTerm);
+        getRequest(searchTerm + 'soundtrack');
     });
 });
 
