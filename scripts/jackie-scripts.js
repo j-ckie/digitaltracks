@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
-        getRequest(searchTerm + 'soundtrack');
+        getRequest(searchTerm.toString() + 'soundtrack');
     });
 });
 
@@ -12,7 +12,7 @@ function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4',
+        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', 
         q: searchTerm,
         type: 'video',
         maxResults: '1'
@@ -25,7 +25,7 @@ function getVideo(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var params = {
         part: 'player',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4',
+        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', // API key - quota for one day is 10,000; resets nightly at 12am PST
         id: searchTerm
     };
   
@@ -39,14 +39,14 @@ function showVideo(results) {
     var html = "";
     var entries = results.items;
 
-    console.log(results);
+    // console.log(results);
     $.each(entries, function (index, value) {
 
         var embedHtml = value.player.embedHtml;
         var videoLink = value.player;
 
         html += embedHtml;
-        console.log(value);
+        // console.log(value);
 
     }); 
     
@@ -62,7 +62,7 @@ function showResults(results) {
     var html = "";
     var entries = results.items;
 
-    console.log(results.items); 
+    // console.log(results.items); 
 
     $.each(entries, function (index, value) {
         getVideo(value.id.videoId);
