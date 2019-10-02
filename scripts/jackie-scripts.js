@@ -5,6 +5,31 @@ $(document).ready(function () {
         event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm.toString() + 'soundtrack');
+
+        var movieURL = "https://www.omdbapi.com/?apikey=dcf79638&t=" + searchTerm;
+        var movieOptions = {
+            s: "",
+        }
+        // John was here
+    function displayMovies(data) {
+            console.log(data);
+            console.log(data.Title);
+            console.log(data.Genre);
+            console.log(data.Runtime);
+            console.log(data.Plot);
+            var movieHTML = '<ul>';
+            movieHTML += '<img ';
+            movieHTML += 'src="' + data.Poster + '" ';
+            movieHTML += 'alt="' + data.Title + '" >';
+            movieHTML += '</li>';
+            movieHTML += '<li>' + data.Title + "</li>";
+            movieHTML += '<li>' + data.Genre + "</li>";
+            movieHTML += '<li>' + data.Runtime + "</li>";
+            movieHTML += '<li>' + data.Plot + "</li>";
+            
+            $('#imdb-results').html(movieHTML);
+        }  
+    $.getJSON(movieURL, movieOptions, displayMovies);
     });
 });
 
@@ -56,21 +81,13 @@ function showVideo(results) {
 
 function hideSearch() {
     document.getElementById("search-term").style.display='none';
+    document.getElementById("main").style.display='none'; // hides the container on the html on search
 }
 
 function showResults(results) {
     var html = "";
     var entries = results.items;
-
-    // console.log(results.items); 
-
     $.each(entries, function (index, value) {
         getVideo(value.id.videoId);
-        //var title = value.snippet.title;
-        //var thumbnail = value.snippet.thumbnails.default.url;
-        //html += '<p>' + title + '</p>';
-        //html += '<img src="' + thumbnail + '">';
     }); 
-    
-    //$('#search-results').html(html);
 }
