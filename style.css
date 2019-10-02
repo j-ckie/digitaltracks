@@ -1,4 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        @media only screen and (max-width: 768px) {
+            [class*= "container"]{
+             width: 100%;}
+            [class*= "wrap"]{
+                width: 100%}
+            [class*="searchTerm"]{
+                width: 100%;} 
+            [class*="search"]{
+                width: 100%;}       
+            [class*= "logo"]{
+                width: 100%;} 
+            [class*= "box"]{
+                width: 100%;} 
+            [class*="random-button"]{
+                width:100%;}
+            [class*="search-button"]{
+                width: 100%;}    
+            }
+
 
 .logo{
     position: absolute;
@@ -81,4 +100,7 @@ body{
     border-radius: 5px;
     border:0;
     z-index: 5;
+}
+.carousel-item{
+    size: 100%;
 }
