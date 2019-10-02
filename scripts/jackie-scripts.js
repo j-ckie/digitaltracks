@@ -39,14 +39,14 @@ function showVideo(results) {
     var html = "";
     var entries = results.items;
 
-    console.log(results);
+    // console.log(results);
     $.each(entries, function (index, value) {
 
         var embedHtml = value.player.embedHtml;
         var videoLink = value.player;
 
         html += embedHtml;
-        console.log(value);
+        // console.log(value);
 
     }); 
     
@@ -62,7 +62,7 @@ function showResults(results) {
     var html = "";
     var entries = results.items;
 
-    console.log(results.items); 
+    // console.log(results.items); 
 
     $.each(entries, function (index, value) {
         getVideo(value.id.videoId);
