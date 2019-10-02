@@ -1,10 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+        @media only screen and (max-width: 768px) {
+            [class*= "container"]{
+             width: 100%;}
+            [class*= "wrap"]{
+                width: 100%}
+            [class*="searchTerm"]{
+                width: 100%;} 
+            [class*="search"]{
+                width: 100%;}       
+            [class*= "logo"]{
+                width: 100%;} 
+            [class*= "box"]{
+                width: 100%;} 
+            [class*="random-button"]{
+                width:100%;}
+            [class*="search-button"]{
+                width: 100%;}    
+            }
 
 
 .logo{
-    position: relative;
+    position: absolute;
     margin-left: 40%;
-    margin-top: 10%;
+    top: 35%;
+    z-index: 4;
 }
 /* Search Box */
 .search {
@@ -21,11 +40,11 @@
   height: 40px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: rgb(110, 110, 110);
+  color: rgb(99, 99, 99);
 }
 
 .searchTerm:focus{
-  color: #fff;
+  color: rgb(59, 59, 59);
 }
 
 .searchButton {
@@ -44,8 +63,44 @@
 .wrap{
   width: 30%;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 3;
 }
-
+.container{
+    display: flex;
+    max-width: 1000px;
+    max-height: 720px;
+    align-content: center;
+    z-index: 1;
+    
+}
+body{
+    background-color: black;
+}
+.box{
+    position: absolute;
+    background-color: black;
+    top: 30%;
+    opacity: 0.5;
+    width: 1000px;
+    height: 260px;
+    border-radius: 3px;
+    z-index: 2;
+}
+.random-button{
+    position:absolute;
+    top: 60%;
+    left: 45%;
+    width: 100px;
+    height: 30px;
+    background-color:rgb(160, 4, 4);
+    color: white;
+    border-radius: 5px;
+    border:0;
+    z-index: 5;
+}
+.carousel-item{
+    size: 100%;
+}
