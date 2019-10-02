@@ -22,7 +22,7 @@ $(document).ready(function () {
             movieHTML += 'src="' + data.Poster + '" ';
             movieHTML += 'alt="' + data.Title + '" >';
             movieHTML += '</li>';
-            movieHTML += '<li>' + data.Title + "</li>";
+            movieHTML += '<h1>' + data.Title + "</h1>";
             movieHTML += '<li>' + data.Genre + "</li>";
             movieHTML += '<li>' + data.Runtime + "</li>";
             movieHTML += '<li>' + data.Plot + "</li>";
@@ -51,7 +51,14 @@ function getVideo(searchTerm) {
     var params = {
         part: 'player',
         key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', // API key - quota for one day is 10,000; resets nightly at 12am PST
-        id: searchTerm
+        id: searchTerm,
+        "status": {
+            "uploadStatus": "processed",
+            "privacyStatus": "public",
+            "license": "youtube",
+            "embeddable": true,
+            "publicStatsViewable": true
+        },
     };
   
     $.getJSON(url, params, showVideo);
@@ -81,7 +88,7 @@ function showVideo(results) {
 
 function hideSearch() {
     document.getElementById("search-term").style.display='none';
-    document.getElementById("main").style.display='none'; // hides the container on the html on search
+    document.getElementById("slideshow").style.display='none'; // hides the container on the html on search
 }
 
 function showResults(results) {
