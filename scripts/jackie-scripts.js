@@ -25,7 +25,7 @@ function getVideo(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var params = {
         part: 'player',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4',
+        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', // API key - quota for one day is 10,000; resets nightly at 12am PST
         id: searchTerm
     };
   
