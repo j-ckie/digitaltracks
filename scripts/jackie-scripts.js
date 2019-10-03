@@ -71,7 +71,7 @@ var movieArray = [
     ["The Last of the Mohicans","aVjwBNsiOv0"],
     ["8 Mile","N6PY0wkHE2U"],
     ["Harry Potter and the Sorcerer's Stone","OO_I6jLt-hg"],
-    ["Gladiator","I1-uzsfFjss"],
+    ["Gladiator","xbHPTPUpQ1I"],
     ["The Wizard of Oz","GPNbHmuf6zM"],
     ["Phantasm","s35BeVQzcq0"],
     ["Midnight Cowboy","1jjI0-qtFKU"],
