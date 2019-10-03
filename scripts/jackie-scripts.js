@@ -9,7 +9,7 @@ $(document).ready(function () {
         var movieURL = "https://www.omdbapi.com/?apikey=dcf79638&t=" + searchTerm;
         var movieOptions = {
             s: "",
-        }
+        }   
         // John was here
     function displayMovies(data) {
             console.log(data);
@@ -24,6 +24,7 @@ $(document).ready(function () {
             moviePoster += 'alt="' + data.Title + '" >';
             movieHTML += '</div>';
             movieHTML += '<h1>' + data.Title + "</h1>";
+            movieHTML += '<li>' + data.Rated + '</li>';
             movieHTML += '<li>' + data.Genre + "</li>";
             movieHTML += '<li>' + data.Runtime + "</li>";
             movieHTML += '<li>' + data.Plot + "</li>";
