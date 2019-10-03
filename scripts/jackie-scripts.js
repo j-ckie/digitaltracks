@@ -33,7 +33,9 @@ $(document).ready(function () {
             movieHTML += '<button type="button" onclick="refreshPage()">Lookup another movie</button>';
             movieHTML += '<li>' + data.Plot + "</li>";
             
-            
+            // moviePoster += '<div style=background-image: + data.Poster + '"; > '
+
+
             $('#poster-results').html(moviePoster);
             $('#imdb-results').html(movieHTML);
         }  

@@ -98,6 +98,9 @@ body {
     height: 30%;
     z-index: 3;
 }
+.video-results{
+    margin-top: 10px;
+}
 
 /* body {
   height: 100vh;

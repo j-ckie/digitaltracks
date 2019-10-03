@@ -246,3 +246,18 @@ button:hover {
         animation-delay: 30s; 
     }
 }
+
+#poster-results{
+    margin-left: 40%;
+}
+#imdb-results{
+    margin-left: 20%;
+}
+.info-box{
+    display: flex;
+    align-content: center;
+    width: 60%;
+    height: 80%;
+    background-color:white;
+    opacity: 0.5%;
+}
