@@ -1,10 +1,13 @@
 // solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
+var apiKey = "AIzaSyBBUotQvCorzLIWF8xQXUI6sZuDzyZOacU";
+var apiKey2 = "AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4";
 
 $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm.toString() + 'soundtrack');
+        
 
         var movieURL = "https://www.omdbapi.com/?apikey=dcf79638&t=" + searchTerm;
         var movieOptions = {
@@ -40,7 +43,7 @@ function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', 
+        key: apiKey, 
         q: searchTerm,
         type: 'video',
         maxResults: '1'
@@ -53,7 +56,7 @@ function getVideo(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var params = {
         part: 'player',
-        key: 'AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4', // API key - quota for one day is 10,000; resets nightly at 12am PST
+        key: apiKey, // API key - quota for one day is 10,000; resets nightly at 12am PST
         id: searchTerm,
         "status": {
             "uploadStatus": "processed",
