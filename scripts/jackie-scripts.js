@@ -277,6 +277,7 @@ $(document).ready(function () {
             $('#poster-results').html(randomMoviePoster);
             $('#imdb-results').html(randomMovieHTML);
         }
+    revealResults();
     $.getJSON(randomMovieURL, randomMovieOptions, displayRandomMovies);
     });
 });
