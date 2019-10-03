@@ -156,7 +156,7 @@ button:hover {
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
 }
-/* why aren't the images loading... */
+
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(images/endgame-vert.jpg) 
 }
@@ -246,14 +246,17 @@ button:hover {
         background-image: url(images/the-room-large.jpg);
         animation-delay: 30s; 
     }
+    
 }
-#poster-results{
-    margin-left: 30%;
-}
+/* removed styling applied to poster results to improve mobile responsiveness */
+
 .poster-container{
     display: flex;
-    align-content: space-around;
-    margin-right: 10%;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+    /* align-content: space-around; */
+    /* margin-right: 10%; */
 }
 #imdb-results{
     margin-left: 0;
