@@ -201,6 +201,10 @@ button:hover {
 
 
 @media screen and (min-width: 800px) {
+    input {
+        padding: .5rem;
+    }
+
     .logo {
         width: 60%;
     }
