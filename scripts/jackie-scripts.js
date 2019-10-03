@@ -29,9 +29,9 @@ $(document).ready(function () {
             movieHTML += '<h1>' + data.Title + "</h1>";
             movieHTML += '<li>' + data.Rated + '</li>';
             movieHTML += '<li>' + data.Genre + "</li>";
-            movieHTML += '<li>' + data.Runtime + "</li>";
+            movieHTML += '<li>' + data.Runtime + "</li>";movieHTML += '<button type="button" onclick="refreshPage()">Lookup another movie</button>'
             movieHTML += '<li>' + data.Plot + "</li>";
-            movieHTML += '<button type="button" onclick="refreshPage()">Lookup another movie</button>'
+            
             
             $('#poster-results').html(moviePoster);
             $('#imdb-results').html(movieHTML);
