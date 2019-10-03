@@ -23,10 +23,17 @@
             <img src="images/digitaltracks-logo-musicnotes.png" alt="digitaltracks logo" class="logo">
 
             <form id="search-term">
+
                 <br>
                 <input id="query" type="text" placeholder="Enter the name of a movie">
                 <br>
-                <button id="buttonID" type="submit" value="Submit">Submit</button>
+
+                <div class="buttons">
+
+                    <button id="buttonID" type="submit" value="Submit">Submit</button>
+
+                    <button type="button" class="random-button" id="movieRandom">Random</button>
+                </div>
             </form>
             
         </div>
@@ -58,16 +65,20 @@
 
     <div class="results">
       <div class="video-container">
+        <div class= "shadow">
         <div id="search-results"></div>
-         </div>
-        <div class="info-container">
+        </div>
+        </div>
+        
         <div class="movie-results">
          <div class="poster-container">   
+
             <div id="poster-results"></div>
          </div>
-         <div class="info-box"></div>
+         <div class="info-box">
          
             <div id="imdb-results"></div>
+        
         
         </div>
         </div> 
