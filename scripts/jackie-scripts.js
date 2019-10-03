@@ -17,16 +17,18 @@ $(document).ready(function () {
             console.log(data.Genre);
             console.log(data.Runtime);
             console.log(data.Plot);
+            var moviePoster = '<div>'
             var movieHTML = '<ul>';
-            movieHTML += '<img ';
-            movieHTML += 'src="' + data.Poster + '" ';
-            movieHTML += 'alt="' + data.Title + '" >';
-            movieHTML += '</li>';
+            moviePoster += '<img ';
+            moviePoster += 'src="' + data.Poster + '" ';
+            moviePoster += 'alt="' + data.Title + '" >';
+            movieHTML += '</div>';
             movieHTML += '<h1>' + data.Title + "</h1>";
             movieHTML += '<li>' + data.Genre + "</li>";
             movieHTML += '<li>' + data.Runtime + "</li>";
             movieHTML += '<li>' + data.Plot + "</li>";
             
+            $('#poster-results').html(moviePoster);
             $('#imdb-results').html(movieHTML);
         }  
     $.getJSON(movieURL, movieOptions, displayMovies);
