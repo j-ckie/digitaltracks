@@ -155,7 +155,7 @@ button:hover {
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
 }
-/* why aren't the images loading... */
+
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(images/endgame-vert.jpg) 
 }
