@@ -31,6 +31,7 @@ $(document).ready(function () {
             movieHTML += '<li>' + data.Genre + "</li>";
             movieHTML += '<li>' + data.Runtime + "</li>";
             movieHTML += '<li>' + data.Plot + "</li>";
+            movieHTML += '<button type="button" onclick="refreshPage()">Lookup another movie</button>'
             
             $('#poster-results').html(moviePoster);
             $('#imdb-results').html(movieHTML);
@@ -104,4 +105,8 @@ function showResults(results) {
     $.each(entries, function (index, value) {
         getVideo(value.id.videoId);
     }); 
+}
+
+function refreshPage() {
+    location.reload();
 }
