@@ -114,28 +114,28 @@ li {
     z-index: 0;
     animation: imageAnimation 36s linear infinite 0s; 
 }
-
+/* why aren't the images loading... */
 .cb-slideshow li:nth-child(1) span { 
-    background-image: url("/group-project/images/endgame-vert.jpg") 
+    background-image: url("/images/endgame-vert.jpg") 
 }
 .cb-slideshow li:nth-child(2) span { 
-    background-image: url("/group-project/images/aladdin.jpeg");
+    background-image: url("/images/aladdin.jpeg");
     animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span { 
-    background-image: url("/group-project/images/back-to-the-future.jpg");
+    background-image: url("/images/back-to-the-future.jpg");
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url("/group-project/images/inception.jpg");
+    background-image: url("/images/inception.jpg");
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url("/group-project/images/moonrise-kingdom.jpg");
+    background-image: url("/images/moonrise-kingdom.jpg");
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
-    background-image: url("/group-project/images/the-room.jpg");
+    background-image: url("/images/the-room.jpg");
     animation-delay: 30s; 
 }
 
