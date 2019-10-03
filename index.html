@@ -7,6 +7,7 @@
     <title>digitaltracks</title>
     <link rel="stylesheet" href="jackie-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel='icon' href='images/favicon.ico' type='image/x-icon'/ >
 </head>
 <body>
 
@@ -25,7 +26,7 @@
                 <br>
                 <input id="query" type="text" placeholder="Enter the name of a movie">
                 <br>
-                <input id="buttonID" type="submit" value="Submit" >
+                <button id="buttonID" type="submit" value="Submit">Submit</button>
             </form>
             
         </div>
@@ -55,11 +56,15 @@
 
     </div> <!--end div for container-->
 
-    <div class="movie-stuff">
+    <div class="results">
+
         <div id="search-results"></div>
-        <div id="imdb-results"></div>
-       
+        <div class="movie-results">
+            <div id="poster-results"></div>
+            <div id="imdb-results"></div>
         
+        </div>
+
     </div> <!--end div for movie-stuff-->
 
     <!-- <div class="footer">
