@@ -14,8 +14,11 @@ body {
 }
 
 form {
-    position: absolute;
-    z-index: 9;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    /* position: absolute;
+    z-index: 10; */
 }
 
 ul {
@@ -24,6 +27,27 @@ ul {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.submission {
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 64, 64, 0.658);
+}
+
+.logo {
+    width: 80%;
 }
 
 .footer {
@@ -36,8 +60,12 @@ ul {
 }
 
 .container {
+    position: relative;
     width: 100vw;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: blue; */
 }
 

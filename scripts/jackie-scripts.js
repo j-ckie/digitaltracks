@@ -89,6 +89,7 @@ function showVideo(results) {
 function hideSearch() {
     document.getElementById("search-term").style.display='none';
     document.getElementById("slideshow").style.display='none'; // hides the container on the html on search
+    document.getElementById("search").style.display='none';
 }
 
 function showResults(results) {
