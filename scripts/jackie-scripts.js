@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
-        getRequest(searchTerm.toString() + 'soundtrack');
+        getRequest(searchTerm.toString() + 'movie soundtrack');
 
         var movieURL = "https://www.omdbapi.com/?apikey=dcf79638&t=" + searchTerm;
         var movieOptions = {
