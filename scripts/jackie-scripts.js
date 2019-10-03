@@ -149,7 +149,7 @@ function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-        key: apiKey2, 
+        key: apiKey3, 
         q: searchTerm,
         type: 'video',
         maxResults: '1'
@@ -162,7 +162,7 @@ function getVideo(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var params = {
         part: 'player',
-        key: apiKey2, // API key - quota for one day is 10,000; resets nightly at 12am PST
+        key: apiKey3, // API key - quota for one day is 10,000; resets nightly at 12am PST
         id: searchTerm,
         "status": {
             "uploadStatus": "processed",
