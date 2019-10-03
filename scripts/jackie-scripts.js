@@ -107,6 +107,7 @@ var movieArray = [
 
 
 $(document).ready(function () {
+    hideResults();  
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
@@ -206,9 +207,18 @@ function hideSearch() {
     document.getElementById("search").style.display='none';
 }
 
+function hideResults() {
+    document.getElementById("return-results").style.display='none';
+}
+
+function revealResults() {
+    document.getElementById("return-results").style.display='block';
+}
+
 function showResults(results) {
     var html = "";
     var entries = results.items;
+    revealResults();
     $.each(entries, function (index, value) {
         getVideo(value.id.videoId);
     }); 
