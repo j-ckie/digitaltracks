@@ -14,8 +14,40 @@ body {
 }
 
 form {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    /* position: absolute;
+    z-index: 10; */
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.submission {
     position: absolute;
-    z-index: 9;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(65, 64, 64, 0.658);
+}
+
+.logo {
+    width: 80%;
 }
 
 .footer {
@@ -28,8 +60,12 @@ form {
 }
 
 .container {
+    position: relative;
     width: 100vw;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-color: blue; */
 }
 
@@ -45,6 +81,9 @@ form {
     z-index: 1;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 .cb-slideshow, .cb-slideshow:after {
@@ -53,6 +92,12 @@ form {
     height: 100%;
     
     z-index: 0;
+}
+
+#imdb-results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cb-slideshow li span { 
