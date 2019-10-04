@@ -1,7 +1,10 @@
 // solution: https://stackoverflow.com/questions/35347054/how-to-create-youtube-search-through-api
-var apiKey = "AIzaSyBBUotQvCorzLIWF8xQXUI6sZuDzyZOacU";
-var apiKey2 = "AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4";
-var apiKey3 = "AIzaSyCDNiO3BCVoa97K2LuFSBO9Rtsf_FrkRug";
+var apiKey = ["AIzaSyBBUotQvCorzLIWF8xQXUI6sZuDzyZOacU",
+    "AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4",
+    "AIzaSyCDNiO3BCVoa97K2LuFSBO9Rtsf_FrkRug"
+    ];
+// var apiKey2 = "AIzaSyCmwi-9Qh215YAYaOcOdjZVdS51T7owlF4";
+// var apiKey3 = "AIzaSyCDNiO3BCVoa97K2LuFSBO9Rtsf_FrkRug";
 
 var movieArray = [
     ["The Good, the Bad and the Ugly", "AkQowzXG5W4"],
@@ -107,6 +110,8 @@ var movieArray = [
 
 
 $(document).ready(function () {
+    shuffleMovie(apiKey);
+
     hideResults();  
     $('#search-term').submit(function (event) {
         event.preventDefault();
@@ -152,7 +157,7 @@ function getRequest(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/search';
     var params = {
         part: 'snippet',
-        key: apiKey3, 
+        key: apiKey[0], 
         q: searchTerm,
         type: 'video',
         maxResults: '1'
@@ -165,7 +170,7 @@ function getVideo(searchTerm) {
     var url = 'https://www.googleapis.com/youtube/v3/videos';
     var params = {
         part: 'player',
-        key: apiKey3, // API key - quota for one day is 10,000; resets nightly at 12am PST
+        key: apiKey[0], // API key - quota for one day is 10,000; resets nightly at 12am PST
         id: searchTerm,
         "status": {
             "uploadStatus": "processed",
