@@ -125,6 +125,7 @@ button:hover {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    height: 50vh;
     /* margin: 0; */
 }
 
@@ -275,13 +276,14 @@ button:hover {
     
 }
 .video-container{
+    position: -webkit-sticky;
     display: flex;
     justify-content: center;
     background-color:rgb(218, 94, 11);
     width: 100%;
-    height: 100%;
+    height: 50vh;
     margin-bottom:3%;
-    padding-bottom: 3rem;
+    padding-bottom: 100;
     padding-top: 3%;
 }
 .shadow{
